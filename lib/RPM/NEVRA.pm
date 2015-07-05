@@ -9,11 +9,11 @@ RPM::NEVRA - Parses, validates NEVRA format
 
 =head1 VERSION
 
-Version 0.0.3
+Version 0.0.4
 
 =cut
 
-our $VERSION = 'v0.0.3';
+our $VERSION = 'v0.0.4';
 
 =head1 SYNOPSIS
 
