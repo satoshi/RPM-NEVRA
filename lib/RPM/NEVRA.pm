@@ -9,11 +9,11 @@ RPM::NEVRA - Parses, validates NEVRA format
 
 =head1 VERSION
 
-Version 0.0.4
+Version 0.0.5
 
 =cut
 
-our $VERSION = 'v0.0.4';
+our $VERSION = 'v0.0.5';
 
 =head1 SYNOPSIS
 
@@ -34,7 +34,7 @@ is to ALWAYS specify the epoch in repoquery queries.
     my %info = $obj->parse_nevra('bind-32:9.10.2-2.P1.fc22.x86_64');
     print $info{epoch}; # prints 32
 
-    my $is_nevra = $obj->is_nevra('bind-9.10.2-2.P1.fc22.x86_64'); # returns ( 0, 'epoch' ) since it is missing epoch
+    my ( $is_nevra, $missing ) = $obj->is_nevra('bind-9.10.2-2.P1.fc22.x86_64'); # returns ( 0, 'epoch' )
     my $str = $obj->convert_to_nevra('bind-9.10.2-2.P1.fc22.x86_64'); # returns 'bind-0:9.10.2-2.P1.fc22.x86_64'
 
 =head1 SUBROUTINES/METHODS
